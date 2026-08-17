@@ -1,0 +1,110 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build (without the leading v), e.g. 1.0.0'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Resolve version
+        id: ver
+        shell: pwsh
+        run: |
+          $v = if ('${{ github.event_name }}' -eq 'workflow_dispatch') {
+            '${{ github.event.inputs.version }}'
+          } else {
+            '${{ github.ref_name }}'.TrimStart('v')
+          }
+          "version=$v" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          "Building version $v"
+
+      # Framework-dependent: small, needs the .NET Desktop Runtime installed.
+      # Self-contained: large, runs on a bare Windows box.
+      - name: Publish
+        shell: pwsh
+        run: |
+          $v = '${{ steps.ver.outputs.version }}'
+          dotnet publish -c Release -r win-x64 --self-contained false `
+            -p:Version=$v -o "publish/XiaomiSMBViewer-$v-win-x64"
+          if ($LASTEXITCODE -ne 0) { throw "framework-dependent publish failed" }
+          dotnet publish -c Release -r win-x64 --self-contained true `
+            -p:Version=$v -o "publish/XiaomiSMBViewer-$v-win-x64-selfcontained"
+          if ($LASTEXITCODE -ne 0) { throw "self-contained publish failed" }
+
+      - name: Package
+        shell: pwsh
+        run: |
+          $v = '${{ steps.ver.outputs.version }}'
+          foreach ($name in @("XiaomiSMBViewer-$v-win-x64", "XiaomiSMBViewer-$v-win-x64-selfcontained")) {
+            $dir = "publish/$name"
+            Copy-Item LICENSE, README.md $dir
+            Remove-Item "$dir/*.pdb" -ErrorAction SilentlyContinue
+            # Sanity check: libvlc must sit next to the exe or Core.Initialize() fails at startup.
+            if (-not (Test-Path "$dir/libvlc/win-x64/libvlc.dll")) { throw "libvlc.dll missing in $name" }
+            if (-not (Test-Path "$dir/Locales/en.json"))          { throw "Locales missing in $name" }
+            Compress-Archive -Path "$dir/*" -DestinationPath "publish/$name.zip" -CompressionLevel Optimal
+          }
+          Get-ChildItem publish -Filter *.zip | ForEach-Object { "{0}  {1:N1} MB" -f $_.Name, ($_.Length/1MB) }
+
+      - name: Write release notes
+        shell: pwsh
+        run: |
+          $v = '${{ steps.ver.outputs.version }}'
+          $fdd = "{0:N0}" -f ((Get-Item "publish/XiaomiSMBViewer-$v-win-x64.zip").Length/1MB)
+          $scd = "{0:N0}" -f ((Get-Item "publish/XiaomiSMBViewer-$v-win-x64-selfcontained.zip").Length/1MB)
+          @"
+A Windows desktop viewer that turns a folder of one-minute Xiaomi camera clips into a single scrubbable timeline for the whole day.
+
+## Which download
+
+| Asset | Size | Requires |
+|---|---|---|
+| ``XiaomiSMBViewer-$v-win-x64.zip`` | $fdd MB | [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0) |
+| ``XiaomiSMBViewer-$v-win-x64-selfcontained.zip`` | $scd MB | nothing, runtime included |
+
+Unpack anywhere and run ``XiaomiSMBViewer.exe``. Keep the ``libvlc`` and ``Locales`` folders next to it.
+
+Install [ffmpeg](https://ffmpeg.org/) and put ``ffmpeg.exe`` / ``ffprobe.exe`` on ``PATH`` (or beside the executable) to enable hover thumbnails, clip export, and exact segment durations. The app runs without them, with those three features disabled.
+
+## Highlights
+
+- One timeline for a whole day, zoomable from 24 hours down to 20 seconds, with recording gaps shown as gaps
+- Seamless playback across per-minute files, skipping gaps automatically
+- D3D11VA hardware decoding of HEVC at 2304x1296, including the ``pcm_alaw`` audio that browser-based players reject
+- Playback speed 0.5x to 16x
+- Thumbnail preview on timeline hover, cached on disk
+- Range export to a single MP4, stream-copied or re-encoded to H.264/AAC
+- Up to four cameras side by side on one shared clock
+- 12 languages, auto-detected from the system locale, switchable at runtime
+
+Windows x64 only.
+"@ | Out-File -FilePath release-notes.md -Encoding utf8
+
+      - name: Create release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $v = '${{ steps.ver.outputs.version }}'
+          gh release create "v$v" `
+            "publish/XiaomiSMBViewer-$v-win-x64.zip" `
+            "publish/XiaomiSMBViewer-$v-win-x64-selfcontained.zip" `
+            --title "v$v" --notes-file release-notes.md
