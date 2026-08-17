@@ -1,0 +1,61 @@
+{
+  "lang.name": "Français",
+  "lang.auto": "Automatique (système)",
+  "lang.label": "LANGUE",
+
+  "sidebar.folder": "DOSSIER DES ENREGISTREMENTS",
+  "sidebar.cameras": "CAMÉRAS  (en sélectionner plusieurs = vue comparative)",
+  "sidebar.days": "JOURS",
+
+  "opt.hw": "Accélération matérielle (D3D11)",
+  "opt.probe": "Durées exactes (ffprobe en arrière-plan)",
+  "opt.thumbs": "Miniatures au survol",
+
+  "ffmpeg.ok": "ffmpeg : OK (miniatures + export + durées exactes)",
+  "ffmpeg.missing": "ffmpeg introuvable — miniatures, export et durées exactes désactivés",
+
+  "tt.browse": "Choisir un dossier",
+  "tt.rescan": "Réanalyser",
+  "tt.prev": "Fichier précédent (,)",
+  "tt.playpause": "Lecture / pause (Espace)",
+  "tt.next": "Fichier suivant (.)",
+  "tt.selstart": "Début de la sélection (S)",
+  "tt.selend": "Fin de la sélection (E)",
+  "tt.fullscreen": "Plein écran (F11)",
+  "tt.follow": "Faire défiler la timeline avec la tête de lecture",
+
+  "btn.export": "Exporter…",
+  "lbl.noselection": "aucune sélection",
+  "lbl.mute": "muet",
+  "lbl.follow": "suivre",
+
+  "status.ready": "Prêt.",
+  "status.scanning": "Analyse de {0}…",
+  "status.nodir": "Le dossier n'existe pas : {0}",
+  "status.nocameras": "Aucune caméra trouvée dans ce dossier.",
+  "status.cameras": "{0} caméra(s) trouvée(s).",
+  "status.readingdays": "Lecture des jours de la caméra {0}…",
+  "status.days": "{0} : {1} jours avec enregistrements.",
+  "status.loadingday": "Chargement de {0}…",
+  "status.dayloaded": "{0} : {1} fichiers, {2} d'enregistrements au total.",
+  "status.dayempty": "{0} : aucun enregistrement.",
+  "status.durations": "Durées exactes des segments prêtes.",
+  "status.endofday": "Fin des enregistrements de cette journée.",
+  "status.rate": "Vitesse de lecture : {0}×",
+  "status.exporting": "Export en cours…",
+  "status.saved": "Enregistré : {0}",
+  "status.exportfailed": "L'export a échoué.",
+  "status.scanerror": "Erreur d'analyse : {0}",
+  "status.loaderror": "Erreur de chargement du jour : {0}",
+
+  "pane.norecordings": "aucun enregistrement",
+  "pane.info": "{0} fichiers, {1}",
+
+  "export.title": "Export",
+  "export.needselection": "Sélectionnez d'abord une plage : Maj + glisser sur la timeline, ou les boutons [ et ].",
+  "export.needffmpeg": "L'export nécessite ffmpeg.exe dans le PATH ou à côté de l'application.",
+  "export.reencode": "Réencoder la vidéo (H.264/AAC) ?\n\nOUI – coupe précise et compatibilité avec tous les lecteurs, mais plus lent.\nNON – assemblage rapide sans recompression (HEVC), coupe à l'image clé la plus proche.",
+
+  "dlg.choosefolder": "Choisissez le dossier xiaomi_camera_videos",
+  "err.title": "Erreur"
+}

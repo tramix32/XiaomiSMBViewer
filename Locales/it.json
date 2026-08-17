@@ -1,0 +1,61 @@
+{
+  "lang.name": "Italiano",
+  "lang.auto": "Automatico (sistema)",
+  "lang.label": "LINGUA",
+
+  "sidebar.folder": "CARTELLA REGISTRAZIONI",
+  "sidebar.cameras": "TELECAMERE  (selezionane più di una = vista comparativa)",
+  "sidebar.days": "GIORNI",
+
+  "opt.hw": "Accelerazione hardware (D3D11)",
+  "opt.probe": "Durate esatte (ffprobe in background)",
+  "opt.thumbs": "Miniature al passaggio del mouse",
+
+  "ffmpeg.ok": "ffmpeg: OK (miniature + esportazione + durate esatte)",
+  "ffmpeg.missing": "ffmpeg non trovato — miniature, esportazione e durate esatte disattivate",
+
+  "tt.browse": "Scegli cartella",
+  "tt.rescan": "Riesegui scansione",
+  "tt.prev": "File precedente (,)",
+  "tt.playpause": "Riproduci / pausa (Spazio)",
+  "tt.next": "File successivo (.)",
+  "tt.selstart": "Inizio selezione (S)",
+  "tt.selend": "Fine selezione (E)",
+  "tt.fullscreen": "Schermo intero (F11)",
+  "tt.follow": "Scorri la timeline seguendo la testina",
+
+  "btn.export": "Esporta…",
+  "lbl.noselection": "nessuna selezione",
+  "lbl.mute": "muto",
+  "lbl.follow": "segui",
+
+  "status.ready": "Pronto.",
+  "status.scanning": "Scansione di {0}…",
+  "status.nodir": "La cartella non esiste: {0}",
+  "status.nocameras": "Nessuna telecamera trovata in questa cartella.",
+  "status.cameras": "Trovate {0} telecamere.",
+  "status.readingdays": "Lettura dei giorni della telecamera {0}…",
+  "status.days": "{0}: {1} giorni con registrazioni.",
+  "status.loadingday": "Caricamento di {0}…",
+  "status.dayloaded": "{0}: {1} file, {2} di registrazioni in totale.",
+  "status.dayempty": "{0}: nessuna registrazione.",
+  "status.durations": "Durate esatte dei segmenti pronte.",
+  "status.endofday": "Fine delle registrazioni di questo giorno.",
+  "status.rate": "Velocità di riproduzione: {0}×",
+  "status.exporting": "Esportazione…",
+  "status.saved": "Salvato: {0}",
+  "status.exportfailed": "Esportazione non riuscita.",
+  "status.scanerror": "Errore di scansione: {0}",
+  "status.loaderror": "Errore nel caricamento del giorno: {0}",
+
+  "pane.norecordings": "nessuna registrazione",
+  "pane.info": "{0} file, {1}",
+
+  "export.title": "Esportazione",
+  "export.needselection": "Seleziona prima un intervallo: Maiusc + trascina sulla timeline, oppure i pulsanti [ e ].",
+  "export.needffmpeg": "L'esportazione richiede ffmpeg.exe nel PATH o accanto all'applicazione.",
+  "export.reencode": "Ricodificare il materiale (H.264/AAC)?\n\nSÌ – taglio preciso e compatibilità con qualsiasi lettore, ma più lento.\nNO – unione veloce senza ricompressione (HEVC), taglio al keyframe più vicino.",
+
+  "dlg.choosefolder": "Scegli la cartella xiaomi_camera_videos",
+  "err.title": "Errore"
+}

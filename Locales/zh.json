@@ -1,0 +1,61 @@
+{
+  "lang.name": "中文（简体）",
+  "lang.auto": "自动（跟随系统）",
+  "lang.label": "语言",
+
+  "sidebar.folder": "录像文件夹",
+  "sidebar.cameras": "摄像头（选择多个＝对比视图）",
+  "sidebar.days": "日期",
+
+  "opt.hw": "硬件加速（D3D11）",
+  "opt.probe": "精确时长（后台运行 ffprobe）",
+  "opt.thumbs": "悬停显示缩略图",
+
+  "ffmpeg.ok": "ffmpeg：可用（缩略图 + 导出 + 精确时长）",
+  "ffmpeg.missing": "未找到 ffmpeg —— 缩略图、导出和精确时长已禁用",
+
+  "tt.browse": "选择文件夹",
+  "tt.rescan": "重新扫描",
+  "tt.prev": "上一个文件（,）",
+  "tt.playpause": "播放／暂停（空格）",
+  "tt.next": "下一个文件（.）",
+  "tt.selstart": "选区起点（S）",
+  "tt.selend": "选区终点（E）",
+  "tt.fullscreen": "全屏（F11）",
+  "tt.follow": "时间轴跟随播放头滚动",
+
+  "btn.export": "导出…",
+  "lbl.noselection": "未选择范围",
+  "lbl.mute": "静音",
+  "lbl.follow": "跟随",
+
+  "status.ready": "就绪。",
+  "status.scanning": "正在扫描 {0}…",
+  "status.nodir": "文件夹不存在：{0}",
+  "status.nocameras": "此文件夹中未找到任何摄像头。",
+  "status.cameras": "找到 {0} 个摄像头。",
+  "status.readingdays": "正在读取摄像头 {0} 的日期…",
+  "status.days": "{0}：{1} 天有录像。",
+  "status.loadingday": "正在加载 {0}…",
+  "status.dayloaded": "{0}：{1} 个文件，共 {2} 录像。",
+  "status.dayempty": "{0}：没有录像。",
+  "status.durations": "各片段的精确时长已就绪。",
+  "status.endofday": "当天录像已播放完毕。",
+  "status.rate": "播放速度：{0}×",
+  "status.exporting": "正在导出…",
+  "status.saved": "已保存：{0}",
+  "status.exportfailed": "导出失败。",
+  "status.scanerror": "扫描出错：{0}",
+  "status.loaderror": "加载当天数据出错：{0}",
+
+  "pane.norecordings": "无录像",
+  "pane.info": "{0} 个文件，{1}",
+
+  "export.title": "导出",
+  "export.needselection": "请先选择范围：在时间轴上按住 Shift 拖动，或使用 [ 和 ] 按钮。",
+  "export.needffmpeg": "导出需要 PATH 中或与程序同目录下的 ffmpeg.exe。",
+  "export.reencode": "是否重新编码（H.264/AAC）？\n\n是 —— 精确剪切，兼容所有播放器，但较慢。\n否 —— 不重新压缩的快速拼接（HEVC），剪切点对齐到最近的关键帧。",
+
+  "dlg.choosefolder": "选择 xiaomi_camera_videos 文件夹",
+  "err.title": "错误"
+}

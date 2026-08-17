@@ -1,0 +1,61 @@
+{
+  "lang.name": "हिन्दी",
+  "lang.auto": "स्वतः (सिस्टम)",
+  "lang.label": "भाषा",
+
+  "sidebar.folder": "रिकॉर्डिंग फ़ोल्डर",
+  "sidebar.cameras": "कैमरे  (कई चुनें = तुलना दृश्य)",
+  "sidebar.days": "दिन",
+
+  "opt.hw": "हार्डवेयर त्वरण (D3D11)",
+  "opt.probe": "सटीक अवधि (पृष्ठभूमि में ffprobe)",
+  "opt.thumbs": "कर्सर पर थंबनेल",
+
+  "ffmpeg.ok": "ffmpeg: ठीक है (थंबनेल + निर्यात + सटीक अवधि)",
+  "ffmpeg.missing": "ffmpeg नहीं मिला — थंबनेल, निर्यात और सटीक अवधि बंद हैं",
+
+  "tt.browse": "फ़ोल्डर चुनें",
+  "tt.rescan": "फिर से स्कैन करें",
+  "tt.prev": "पिछली फ़ाइल (,)",
+  "tt.playpause": "चलाएँ / रोकें (स्पेस)",
+  "tt.next": "अगली फ़ाइल (.)",
+  "tt.selstart": "चयन का आरंभ (S)",
+  "tt.selend": "चयन का अंत (E)",
+  "tt.fullscreen": "पूर्ण स्क्रीन (F11)",
+  "tt.follow": "प्लेहेड के साथ टाइमलाइन को स्क्रॉल करें",
+
+  "btn.export": "निर्यात…",
+  "lbl.noselection": "कोई चयन नहीं",
+  "lbl.mute": "मौन",
+  "lbl.follow": "अनुसरण",
+
+  "status.ready": "तैयार।",
+  "status.scanning": "{0} स्कैन किया जा रहा है…",
+  "status.nodir": "फ़ोल्डर मौजूद नहीं है: {0}",
+  "status.nocameras": "इस फ़ोल्डर में कोई कैमरा नहीं मिला।",
+  "status.cameras": "{0} कैमरे मिले।",
+  "status.readingdays": "कैमरा {0} के दिन पढ़े जा रहे हैं…",
+  "status.days": "{0}: रिकॉर्डिंग वाले {1} दिन।",
+  "status.loadingday": "{0} लोड हो रहा है…",
+  "status.dayloaded": "{0}: {1} फ़ाइलें, कुल {2} की रिकॉर्डिंग।",
+  "status.dayempty": "{0}: कोई रिकॉर्डिंग नहीं।",
+  "status.durations": "खंडों की सटीक अवधि तैयार है।",
+  "status.endofday": "इस दिन की रिकॉर्डिंग समाप्त।",
+  "status.rate": "प्लेबैक गति: {0}×",
+  "status.exporting": "निर्यात हो रहा है…",
+  "status.saved": "सहेजा गया: {0}",
+  "status.exportfailed": "निर्यात विफल रहा।",
+  "status.scanerror": "स्कैन त्रुटि: {0}",
+  "status.loaderror": "दिन लोड करने में त्रुटि: {0}",
+
+  "pane.norecordings": "कोई रिकॉर्डिंग नहीं",
+  "pane.info": "{0} फ़ाइलें, {1}",
+
+  "export.title": "निर्यात",
+  "export.needselection": "पहले एक श्रेणी चुनें: टाइमलाइन पर Shift + खींचें, या [ और ] बटन।",
+  "export.needffmpeg": "निर्यात के लिए PATH में या ऐप के साथ ffmpeg.exe आवश्यक है।",
+  "export.reencode": "सामग्री को फिर से एन्कोड करें (H.264/AAC)?\n\nहाँ – सटीक कट और हर प्लेयर के साथ संगतता, पर धीमा।\nनहीं – बिना पुनःसंपीड़न तेज़ जोड़ (HEVC), कट निकटतम कीफ़्रेम पर।",
+
+  "dlg.choosefolder": "xiaomi_camera_videos फ़ोल्डर चुनें",
+  "err.title": "त्रुटि"
+}

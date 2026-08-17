@@ -1,0 +1,61 @@
+{
+  "lang.name": "日本語",
+  "lang.auto": "自動（システム）",
+  "lang.label": "言語",
+
+  "sidebar.folder": "録画フォルダー",
+  "sidebar.cameras": "カメラ（複数選択＝比較表示）",
+  "sidebar.days": "日付",
+
+  "opt.hw": "ハードウェアアクセラレーション（D3D11）",
+  "opt.probe": "正確な長さ（バックグラウンドで ffprobe）",
+  "opt.thumbs": "カーソル位置のサムネイル",
+
+  "ffmpeg.ok": "ffmpeg: OK（サムネイル＋書き出し＋正確な長さ）",
+  "ffmpeg.missing": "ffmpeg が見つかりません — サムネイル・書き出し・正確な長さは無効です",
+
+  "tt.browse": "フォルダーを選択",
+  "tt.rescan": "再スキャン",
+  "tt.prev": "前のファイル（,）",
+  "tt.playpause": "再生／一時停止（スペース）",
+  "tt.next": "次のファイル（.）",
+  "tt.selstart": "選択範囲の開始（S）",
+  "tt.selend": "選択範囲の終了（E）",
+  "tt.fullscreen": "全画面（F11）",
+  "tt.follow": "再生ヘッドに合わせてタイムラインをスクロール",
+
+  "btn.export": "書き出し…",
+  "lbl.noselection": "選択範囲なし",
+  "lbl.mute": "ミュート",
+  "lbl.follow": "追従",
+
+  "status.ready": "準備完了。",
+  "status.scanning": "{0} をスキャン中…",
+  "status.nodir": "フォルダーが存在しません: {0}",
+  "status.nocameras": "このフォルダーにカメラが見つかりません。",
+  "status.cameras": "{0} 台のカメラが見つかりました。",
+  "status.readingdays": "カメラ {0} の日付を読み込み中…",
+  "status.days": "{0}: 録画のある日数 {1}。",
+  "status.loadingday": "{0} を読み込み中…",
+  "status.dayloaded": "{0}: {1} ファイル、合計 {2} の録画。",
+  "status.dayempty": "{0}: 録画がありません。",
+  "status.durations": "各セグメントの正確な長さが準備できました。",
+  "status.endofday": "この日の録画は終了です。",
+  "status.rate": "再生速度: {0}×",
+  "status.exporting": "書き出し中…",
+  "status.saved": "保存しました: {0}",
+  "status.exportfailed": "書き出しに失敗しました。",
+  "status.scanerror": "スキャンエラー: {0}",
+  "status.loaderror": "日付の読み込みエラー: {0}",
+
+  "pane.norecordings": "録画なし",
+  "pane.info": "{0} ファイル、{1}",
+
+  "export.title": "書き出し",
+  "export.needselection": "先に範囲を選択してください: タイムライン上で Shift＋ドラッグ、または [ と ] ボタン。",
+  "export.needffmpeg": "書き出しには PATH 上またはアプリと同じ場所にある ffmpeg.exe が必要です。",
+  "export.reencode": "映像を再エンコードしますか（H.264/AAC）？\n\nはい – 正確なカットとあらゆるプレーヤーとの互換性。ただし低速。\nいいえ – 再圧縮なしの高速連結（HEVC）。カットは最寄りのキーフレームになります。",
+
+  "dlg.choosefolder": "xiaomi_camera_videos フォルダーを選択",
+  "err.title": "エラー"
+}

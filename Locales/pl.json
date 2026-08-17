@@ -1,0 +1,61 @@
+{
+  "lang.name": "Polski",
+  "lang.auto": "Automatycznie (system)",
+  "lang.label": "JĘZYK",
+
+  "sidebar.folder": "KATALOG NAGRAŃ",
+  "sidebar.cameras": "KAMERY  (zaznacz kilka = widok porównawczy)",
+  "sidebar.days": "DNI",
+
+  "opt.hw": "Akceleracja sprzętowa (D3D11)",
+  "opt.probe": "Dokładne długości (ffprobe w tle)",
+  "opt.thumbs": "Miniatury pod kursorem",
+
+  "ffmpeg.ok": "ffmpeg: OK (miniatury + eksport + dokładne długości)",
+  "ffmpeg.missing": "ffmpeg nie znaleziony — miniatury, eksport i dokładne długości wyłączone",
+
+  "tt.browse": "Wybierz katalog",
+  "tt.rescan": "Przeskanuj ponownie",
+  "tt.prev": "Poprzedni plik (,)",
+  "tt.playpause": "Odtwarzaj / pauza (Spacja)",
+  "tt.next": "Następny plik (.)",
+  "tt.selstart": "Początek zaznaczenia (S)",
+  "tt.selend": "Koniec zaznaczenia (E)",
+  "tt.fullscreen": "Pełny ekran (F11)",
+  "tt.follow": "Przewijaj oś czasu za głowicą",
+
+  "btn.export": "Eksportuj…",
+  "lbl.noselection": "brak zaznaczenia",
+  "lbl.mute": "wycisz",
+  "lbl.follow": "podążaj",
+
+  "status.ready": "Gotowe.",
+  "status.scanning": "Skanuję {0}…",
+  "status.nodir": "Katalog nie istnieje: {0}",
+  "status.nocameras": "Nie znaleziono żadnych kamer w tym katalogu.",
+  "status.cameras": "Znaleziono {0} kamer.",
+  "status.readingdays": "Czytam dni kamery {0}…",
+  "status.days": "{0}: {1} dni z nagraniami.",
+  "status.loadingday": "Wczytuję {0}…",
+  "status.dayloaded": "{0}: {1} plików, łącznie {2} nagrań.",
+  "status.dayempty": "{0}: brak nagrań.",
+  "status.durations": "Dokładne długości segmentów gotowe.",
+  "status.endofday": "Koniec nagrań tego dnia.",
+  "status.rate": "Prędkość odtwarzania: {0}×",
+  "status.exporting": "Eksportuję…",
+  "status.saved": "Zapisano: {0}",
+  "status.exportfailed": "Eksport nie powiódł się.",
+  "status.scanerror": "Błąd skanowania: {0}",
+  "status.loaderror": "Błąd wczytywania dnia: {0}",
+
+  "pane.norecordings": "brak nagrań",
+  "pane.info": "{0} plików, {1}",
+
+  "export.title": "Eksport",
+  "export.needselection": "Najpierw zaznacz zakres: Shift + przeciągnij po osi czasu, albo przyciski [ i ].",
+  "export.needffmpeg": "Eksport wymaga ffmpeg.exe w PATH lub obok pliku aplikacji.",
+  "export.reencode": "Przekodować materiał (H.264/AAC)?\n\nTAK – dokładne cięcie i zgodność z każdym odtwarzaczem, ale wolniej.\nNIE – szybkie sklejenie bez rekompresji (HEVC), cięcie do najbliższej klatki kluczowej.",
+
+  "dlg.choosefolder": "Wybierz katalog xiaomi_camera_videos",
+  "err.title": "Błąd"
+}

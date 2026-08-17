@@ -1,0 +1,61 @@
+{
+  "lang.name": "Deutsch",
+  "lang.auto": "Automatisch (System)",
+  "lang.label": "SPRACHE",
+
+  "sidebar.folder": "AUFNAHMEORDNER",
+  "sidebar.cameras": "KAMERAS  (mehrere auswählen = Vergleichsansicht)",
+  "sidebar.days": "TAGE",
+
+  "opt.hw": "Hardwarebeschleunigung (D3D11)",
+  "opt.probe": "Genaue Längen (ffprobe im Hintergrund)",
+  "opt.thumbs": "Vorschaubilder beim Überfahren",
+
+  "ffmpeg.ok": "ffmpeg: OK (Vorschaubilder + Export + genaue Längen)",
+  "ffmpeg.missing": "ffmpeg nicht gefunden — Vorschaubilder, Export und genaue Längen deaktiviert",
+
+  "tt.browse": "Ordner wählen",
+  "tt.rescan": "Erneut einlesen",
+  "tt.prev": "Vorherige Datei (,)",
+  "tt.playpause": "Wiedergabe / Pause (Leertaste)",
+  "tt.next": "Nächste Datei (.)",
+  "tt.selstart": "Auswahlanfang (S)",
+  "tt.selend": "Auswahlende (E)",
+  "tt.fullscreen": "Vollbild (F11)",
+  "tt.follow": "Zeitleiste dem Abspielkopf folgen lassen",
+
+  "btn.export": "Exportieren…",
+  "lbl.noselection": "keine Auswahl",
+  "lbl.mute": "stumm",
+  "lbl.follow": "folgen",
+
+  "status.ready": "Bereit.",
+  "status.scanning": "Durchsuche {0}…",
+  "status.nodir": "Ordner existiert nicht: {0}",
+  "status.nocameras": "In diesem Ordner wurden keine Kameras gefunden.",
+  "status.cameras": "{0} Kamera(s) gefunden.",
+  "status.readingdays": "Lese Tage der Kamera {0}…",
+  "status.days": "{0}: {1} Tage mit Aufnahmen.",
+  "status.loadingday": "Lade {0}…",
+  "status.dayloaded": "{0}: {1} Dateien, insgesamt {2} Aufnahmen.",
+  "status.dayempty": "{0}: keine Aufnahmen.",
+  "status.durations": "Genaue Segmentlängen sind bereit.",
+  "status.endofday": "Ende der Aufnahmen dieses Tages.",
+  "status.rate": "Wiedergabegeschwindigkeit: {0}×",
+  "status.exporting": "Exportiere…",
+  "status.saved": "Gespeichert: {0}",
+  "status.exportfailed": "Export fehlgeschlagen.",
+  "status.scanerror": "Fehler beim Durchsuchen: {0}",
+  "status.loaderror": "Fehler beim Laden des Tages: {0}",
+
+  "pane.norecordings": "keine Aufnahmen",
+  "pane.info": "{0} Dateien, {1}",
+
+  "export.title": "Export",
+  "export.needselection": "Wähle zuerst einen Bereich: Umschalt + Ziehen auf der Zeitleiste oder die Tasten [ und ].",
+  "export.needffmpeg": "Der Export benötigt ffmpeg.exe im PATH oder neben der Anwendung.",
+  "export.reencode": "Material neu kodieren (H.264/AAC)?\n\nJA – exakter Schnitt und Kompatibilität mit jedem Player, aber langsamer.\nNEIN – schnelles Zusammenfügen ohne Neukodierung (HEVC), Schnitt am nächsten Keyframe.",
+
+  "dlg.choosefolder": "Wähle den Ordner xiaomi_camera_videos",
+  "err.title": "Fehler"
+}

@@ -1,0 +1,61 @@
+{
+  "lang.name": "Português",
+  "lang.auto": "Automático (sistema)",
+  "lang.label": "IDIOMA",
+
+  "sidebar.folder": "PASTA DAS GRAVAÇÕES",
+  "sidebar.cameras": "CÂMERAS  (selecione várias = vista comparativa)",
+  "sidebar.days": "DIAS",
+
+  "opt.hw": "Aceleração por hardware (D3D11)",
+  "opt.probe": "Durações exatas (ffprobe em segundo plano)",
+  "opt.thumbs": "Miniaturas ao passar o cursor",
+
+  "ffmpeg.ok": "ffmpeg: OK (miniaturas + exportação + durações exatas)",
+  "ffmpeg.missing": "ffmpeg não encontrado — miniaturas, exportação e durações exatas desativadas",
+
+  "tt.browse": "Escolher pasta",
+  "tt.rescan": "Reexaminar",
+  "tt.prev": "Arquivo anterior (,)",
+  "tt.playpause": "Reproduzir / pausar (Espaço)",
+  "tt.next": "Próximo arquivo (.)",
+  "tt.selstart": "Início da seleção (S)",
+  "tt.selend": "Fim da seleção (E)",
+  "tt.fullscreen": "Tela cheia (F11)",
+  "tt.follow": "Rolar a linha do tempo com o cursor de reprodução",
+
+  "btn.export": "Exportar…",
+  "lbl.noselection": "sem seleção",
+  "lbl.mute": "mudo",
+  "lbl.follow": "seguir",
+
+  "status.ready": "Pronto.",
+  "status.scanning": "Examinando {0}…",
+  "status.nodir": "A pasta não existe: {0}",
+  "status.nocameras": "Nenhuma câmera encontrada nesta pasta.",
+  "status.cameras": "{0} câmera(s) encontrada(s).",
+  "status.readingdays": "Lendo os dias da câmera {0}…",
+  "status.days": "{0}: {1} dias com gravações.",
+  "status.loadingday": "Carregando {0}…",
+  "status.dayloaded": "{0}: {1} arquivos, {2} de gravação no total.",
+  "status.dayempty": "{0}: sem gravações.",
+  "status.durations": "Durações exatas dos segmentos prontas.",
+  "status.endofday": "Fim das gravações deste dia.",
+  "status.rate": "Velocidade de reprodução: {0}×",
+  "status.exporting": "Exportando…",
+  "status.saved": "Salvo: {0}",
+  "status.exportfailed": "A exportação falhou.",
+  "status.scanerror": "Erro ao examinar: {0}",
+  "status.loaderror": "Erro ao carregar o dia: {0}",
+
+  "pane.norecordings": "sem gravações",
+  "pane.info": "{0} arquivos, {1}",
+
+  "export.title": "Exportação",
+  "export.needselection": "Selecione primeiro um intervalo: Shift + arrastar na linha do tempo, ou os botões [ e ].",
+  "export.needffmpeg": "A exportação requer ffmpeg.exe no PATH ou ao lado do aplicativo.",
+  "export.reencode": "Recodificar o material (H.264/AAC)?\n\nSIM – corte exato e compatibilidade com qualquer reprodutor, mas mais lento.\nNÃO – junção rápida sem recompressão (HEVC), corte no quadro-chave mais próximo.",
+
+  "dlg.choosefolder": "Escolha a pasta xiaomi_camera_videos",
+  "err.title": "Erro"
+}

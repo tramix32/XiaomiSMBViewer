@@ -1,0 +1,61 @@
+{
+  "lang.name": "Español",
+  "lang.auto": "Automático (sistema)",
+  "lang.label": "IDIOMA",
+
+  "sidebar.folder": "CARPETA DE GRABACIONES",
+  "sidebar.cameras": "CÁMARAS  (selecciona varias = vista comparativa)",
+  "sidebar.days": "DÍAS",
+
+  "opt.hw": "Aceleración por hardware (D3D11)",
+  "opt.probe": "Duraciones exactas (ffprobe en segundo plano)",
+  "opt.thumbs": "Miniaturas al pasar el cursor",
+
+  "ffmpeg.ok": "ffmpeg: OK (miniaturas + exportación + duraciones exactas)",
+  "ffmpeg.missing": "ffmpeg no encontrado — miniaturas, exportación y duraciones exactas desactivadas",
+
+  "tt.browse": "Elegir carpeta",
+  "tt.rescan": "Volver a escanear",
+  "tt.prev": "Archivo anterior (,)",
+  "tt.playpause": "Reproducir / pausar (Espacio)",
+  "tt.next": "Archivo siguiente (.)",
+  "tt.selstart": "Inicio de la selección (S)",
+  "tt.selend": "Fin de la selección (E)",
+  "tt.fullscreen": "Pantalla completa (F11)",
+  "tt.follow": "Desplazar la línea de tiempo con el cabezal",
+
+  "btn.export": "Exportar…",
+  "lbl.noselection": "sin selección",
+  "lbl.mute": "silenciar",
+  "lbl.follow": "seguir",
+
+  "status.ready": "Listo.",
+  "status.scanning": "Escaneando {0}…",
+  "status.nodir": "La carpeta no existe: {0}",
+  "status.nocameras": "No se encontraron cámaras en esta carpeta.",
+  "status.cameras": "Se encontraron {0} cámara(s).",
+  "status.readingdays": "Leyendo los días de la cámara {0}…",
+  "status.days": "{0}: {1} días con grabaciones.",
+  "status.loadingday": "Cargando {0}…",
+  "status.dayloaded": "{0}: {1} archivos, {2} de grabación en total.",
+  "status.dayempty": "{0}: sin grabaciones.",
+  "status.durations": "Duraciones exactas de los segmentos listas.",
+  "status.endofday": "Fin de las grabaciones de este día.",
+  "status.rate": "Velocidad de reproducción: {0}×",
+  "status.exporting": "Exportando…",
+  "status.saved": "Guardado: {0}",
+  "status.exportfailed": "La exportación falló.",
+  "status.scanerror": "Error al escanear: {0}",
+  "status.loaderror": "Error al cargar el día: {0}",
+
+  "pane.norecordings": "sin grabaciones",
+  "pane.info": "{0} archivos, {1}",
+
+  "export.title": "Exportación",
+  "export.needselection": "Primero selecciona un rango: Mayús + arrastrar en la línea de tiempo, o los botones [ y ].",
+  "export.needffmpeg": "La exportación requiere ffmpeg.exe en el PATH o junto a la aplicación.",
+  "export.reencode": "¿Recodificar el material (H.264/AAC)?\n\nSÍ – corte exacto y compatibilidad con cualquier reproductor, pero más lento.\nNO – unión rápida sin recompresión (HEVC), corte al fotograma clave más cercano.",
+
+  "dlg.choosefolder": "Elige la carpeta xiaomi_camera_videos",
+  "err.title": "Error"
+}

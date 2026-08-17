@@ -1,0 +1,164 @@
+<Window x:Class="XiaomiSMBViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ctl="clr-namespace:XiaomiSMBViewer.Controls"
+        Title="Xiaomi SMB Viewer" Height="920" Width="1500"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource Bg}"
+        UseLayoutRounding="True">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ============ PANEL BOCZNY ============ -->
+        <Border x:Name="Sidebar" Grid.Column="0" Width="280"
+                Background="{StaticResource BgPanel}" BorderBrush="{StaticResource Border}" BorderThickness="0,0,1,0">
+            <Grid Margin="12,10,12,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="XIAOMI SMB VIEWER" FontWeight="Bold" FontSize="13"
+                           Foreground="{StaticResource Accent}"/>
+
+                <TextBlock x:Name="FolderCaption" Grid.Row="1" Style="{StaticResource Caption}"/>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="RootBox" Grid.Column="0"/>
+                    <Button x:Name="BrowseBtn" Grid.Column="1" Content="…" Margin="4,0,0,0" Padding="8,4"
+                            Click="BrowseRoot_Click"/>
+                    <Button x:Name="RescanBtn" Grid.Column="2" Content="⟳" Margin="4,0,0,0" Padding="8,4"
+                            Click="ReloadRoot_Click"/>
+                </Grid>
+
+                <TextBlock x:Name="CamerasCaption" Grid.Row="3" Style="{StaticResource Caption}" TextWrapping="Wrap"/>
+                <ListBox x:Name="CameraList" Grid.Row="4" SelectionMode="Extended"
+                         SelectionChanged="CameraList_SelectionChanged"/>
+
+                <TextBlock x:Name="DaysCaption" Grid.Row="5" Style="{StaticResource Caption}"/>
+                <ListBox x:Name="DayList" Grid.Row="6" SelectionChanged="DayList_SelectionChanged"/>
+
+                <StackPanel Grid.Row="7" Margin="0,10,0,0">
+                    <CheckBox x:Name="HwDecodeBox" IsChecked="True"
+                              Checked="HwDecode_Changed" Unchecked="HwDecode_Changed" Margin="0,0,0,6"/>
+                    <CheckBox x:Name="ProbeBox" IsChecked="True" Margin="0,0,0,6"/>
+                    <CheckBox x:Name="ThumbBox" IsChecked="True"/>
+
+                    <TextBlock x:Name="LanguageCaption" Style="{StaticResource Caption}"/>
+                    <ComboBox x:Name="LanguageBox" SelectionChanged="Language_Changed"/>
+
+                    <TextBlock x:Name="FfmpegStatus" Style="{StaticResource Caption}" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- ============ CZĘŚĆ GŁÓWNA ============ -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- wideo -->
+            <!-- Wideo i os czasu zawsze LTR: os czasu rysuje sie od lewej do prawej niezaleznie od jezyka. -->
+            <Grid x:Name="VideoHost" Grid.Row="0" Background="#0A0C0F" FlowDirection="LeftToRight"/>
+
+            <!-- pasek transportu -->
+            <Border Grid.Row="1" Background="{StaticResource BgPanel}" BorderBrush="{StaticResource Border}"
+                    BorderThickness="0,1,0,0" Padding="10,7">
+                <DockPanel LastChildFill="False">
+
+                    <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                        <Button x:Name="PrevBtn" Content="⏮" Click="PrevSegment_Click" Width="36"/>
+                        <Button x:Name="PlayButton" Content="▶" Click="PlayPause_Click"
+                                Width="42" Margin="6,0,0,0" FontSize="14"/>
+                        <Button x:Name="NextBtn" Content="⏭" Click="NextSegment_Click" Width="36" Margin="6,0,0,0"/>
+
+                        <Border Width="1" Background="{StaticResource Border}" Margin="10,2"/>
+
+                        <TextBlock x:Name="TimeLabel" Text="--:--:--" FontFamily="Consolas" FontSize="17"
+                                   VerticalAlignment="Center" MinWidth="92"/>
+                        <TextBlock x:Name="DateLabel" Text="" Foreground="{StaticResource FgDim}"
+                                   VerticalAlignment="Center" Margin="8,0,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                        <Button x:Name="SelStartBtn" Content="[" Click="SelectionStart_Click" Width="30"/>
+                        <Button x:Name="SelEndBtn" Content="]" Click="SelectionEnd_Click" Width="30" Margin="4,0,0,0"/>
+                        <TextBlock x:Name="SelLabel" Foreground="{StaticResource FgDim}"
+                                   VerticalAlignment="Center" Margin="8,0,8,0" MinWidth="140"/>
+                        <Button x:Name="ExportBtn" Click="Export_Click"/>
+                        <Border Width="1" Background="{StaticResource Border}" Margin="10,2"/>
+                        <Button x:Name="FullscreenBtn" Content="⛶" Click="Fullscreen_Click" Width="34"/>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,0,16,0">
+                        <TextBlock Text="🔊" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                        <Slider x:Name="VolumeSlider" Width="90" Minimum="0" Maximum="100" Value="60"
+                                VerticalAlignment="Center" ValueChanged="Volume_Changed"/>
+                        <CheckBox x:Name="MuteBox" IsChecked="True" VerticalAlignment="Center"
+                                  Margin="8,0,0,0" Checked="Mute_Changed" Unchecked="Mute_Changed"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="SpeedPanel" DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,0,16,0"/>
+
+                    <CheckBox x:Name="FollowBox" DockPanel.Dock="Right" IsChecked="True"
+                              VerticalAlignment="Center" Margin="16,0,16,0"
+                              Checked="Follow_Changed" Unchecked="Follow_Changed"/>
+                </DockPanel>
+            </Border>
+
+            <!-- oś czasu + miniatura -->
+            <Border Grid.Row="2" Background="{StaticResource BgPanel}" BorderBrush="{StaticResource Border}"
+                    BorderThickness="0,1,0,0" Padding="10,8">
+                <Grid Height="118" FlowDirection="LeftToRight">
+                    <ctl:TimelineControl x:Name="Timeline"/>
+
+                    <!-- VideoView to natywne okno (HWND), wiec zwykly element WPF nigdy nie narysuje sie
+                         nad obrazem. Popup jest osobnym oknem top-level i przykrywa wideo poprawnie. -->
+                    <Popup x:Name="ThumbPopup" Placement="Relative" PlacementTarget="{Binding ElementName=Timeline}"
+                           AllowsTransparency="True" StaysOpen="True" IsHitTestVisible="False" IsOpen="False">
+                        <Border Background="#0B0E13" BorderBrush="{StaticResource Accent}" BorderThickness="1"
+                                CornerRadius="5" Padding="4" Margin="6" Effect="{x:Null}">
+                            <StackPanel>
+                                <Border x:Name="ThumbFrame" Width="320" Height="180" Background="#05070A">
+                                    <Image x:Name="ThumbImage" Stretch="Uniform"/>
+                                </Border>
+                                <TextBlock x:Name="ThumbTime" HorizontalAlignment="Center" FontFamily="Consolas"
+                                           FontSize="13" Margin="0,4,0,2"/>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
+                </Grid>
+            </Border>
+
+            <!-- pasek stanu -->
+            <Border Grid.Row="3" Background="#0E1116" BorderBrush="{StaticResource Border}" BorderThickness="0,1,0,0"
+                    Padding="10,4">
+                <DockPanel>
+                    <ProgressBar x:Name="BusyBar" DockPanel.Dock="Right" Width="160" Height="8"
+                                 Minimum="0" Maximum="1" Visibility="Collapsed"
+                                 Foreground="{StaticResource Accent}" Background="#1B1F25" BorderThickness="0"/>
+                    <TextBlock x:Name="StatusLabel" Foreground="{StaticResource FgDim}"/>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+{
+  "lang.name": "العربية",
+  "lang.auto": "تلقائي (النظام)",
+  "lang.label": "اللغة",
+
+  "sidebar.folder": "مجلد التسجيلات",
+  "sidebar.cameras": "الكاميرات  (اختر عدة كاميرات = عرض المقارنة)",
+  "sidebar.days": "الأيام",
+
+  "opt.hw": "تسريع بالعتاد (D3D11)",
+  "opt.probe": "مدد دقيقة (ffprobe في الخلفية)",
+  "opt.thumbs": "صور مصغّرة عند المرور",
+
+  "ffmpeg.ok": "ffmpeg: جاهز (الصور المصغّرة + التصدير + المدد الدقيقة)",
+  "ffmpeg.missing": "لم يُعثر على ffmpeg — الصور المصغّرة والتصدير والمدد الدقيقة معطّلة",
+
+  "tt.browse": "اختر مجلدًا",
+  "tt.rescan": "إعادة الفحص",
+  "tt.prev": "الملف السابق (,)",
+  "tt.playpause": "تشغيل / إيقاف مؤقت (مسافة)",
+  "tt.next": "الملف التالي (.)",
+  "tt.selstart": "بداية التحديد (S)",
+  "tt.selend": "نهاية التحديد (E)",
+  "tt.fullscreen": "ملء الشاشة (F11)",
+  "tt.follow": "تمرير الخط الزمني مع مؤشر التشغيل",
+
+  "btn.export": "تصدير…",
+  "lbl.noselection": "لا يوجد تحديد",
+  "lbl.mute": "كتم",
+  "lbl.follow": "تتبّع",
+
+  "status.ready": "جاهز.",
+  "status.scanning": "جارٍ فحص {0}…",
+  "status.nodir": "المجلد غير موجود: {0}",
+  "status.nocameras": "لم يُعثر على أي كاميرا في هذا المجلد.",
+  "status.cameras": "تم العثور على {0} كاميرا.",
+  "status.readingdays": "جارٍ قراءة أيام الكاميرا {0}…",
+  "status.days": "{0}: {1} يومًا بها تسجيلات.",
+  "status.loadingday": "جارٍ تحميل {0}…",
+  "status.dayloaded": "{0}: {1} ملفًا، بإجمالي {2} من التسجيلات.",
+  "status.dayempty": "{0}: لا توجد تسجيلات.",
+  "status.durations": "المدد الدقيقة للمقاطع جاهزة.",
+  "status.endofday": "انتهت تسجيلات هذا اليوم.",
+  "status.rate": "سرعة التشغيل: {0}×",
+  "status.exporting": "جارٍ التصدير…",
+  "status.saved": "تم الحفظ: {0}",
+  "status.exportfailed": "فشل التصدير.",
+  "status.scanerror": "خطأ في الفحص: {0}",
+  "status.loaderror": "خطأ في تحميل اليوم: {0}",
+
+  "pane.norecordings": "لا توجد تسجيلات",
+  "pane.info": "{0} ملفًا، {1}",
+
+  "export.title": "تصدير",
+  "export.needselection": "حدّد نطاقًا أولًا: Shift + السحب على الخط الزمني، أو الزرّان [ و ].",
+  "export.needffmpeg": "يتطلب التصدير وجود ffmpeg.exe في PATH أو بجوار التطبيق.",
+  "export.reencode": "إعادة ترميز المادة (H.264/AAC)؟\n\nنعم – قصّ دقيق وتوافق مع أي مشغّل، لكنه أبطأ.\nلا – دمج سريع دون إعادة ضغط (HEVC)، والقصّ عند أقرب إطار مفتاحي.",
+
+  "dlg.choosefolder": "اختر مجلد xiaomi_camera_videos",
+  "err.title": "خطأ"
+}

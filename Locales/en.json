@@ -1,0 +1,61 @@
+{
+  "lang.name": "English",
+  "lang.auto": "Automatic (system)",
+  "lang.label": "LANGUAGE",
+
+  "sidebar.folder": "RECORDINGS FOLDER",
+  "sidebar.cameras": "CAMERAS  (select several = comparison view)",
+  "sidebar.days": "DAYS",
+
+  "opt.hw": "Hardware acceleration (D3D11)",
+  "opt.probe": "Exact durations (ffprobe in background)",
+  "opt.thumbs": "Thumbnails on hover",
+
+  "ffmpeg.ok": "ffmpeg: OK (thumbnails + export + exact durations)",
+  "ffmpeg.missing": "ffmpeg not found — thumbnails, export and exact durations are disabled",
+
+  "tt.browse": "Choose folder",
+  "tt.rescan": "Rescan",
+  "tt.prev": "Previous file (,)",
+  "tt.playpause": "Play / pause (Space)",
+  "tt.next": "Next file (.)",
+  "tt.selstart": "Selection start (S)",
+  "tt.selend": "Selection end (E)",
+  "tt.fullscreen": "Fullscreen (F11)",
+  "tt.follow": "Scroll the timeline with the playhead",
+
+  "btn.export": "Export…",
+  "lbl.noselection": "no selection",
+  "lbl.mute": "mute",
+  "lbl.follow": "follow",
+
+  "status.ready": "Ready.",
+  "status.scanning": "Scanning {0}…",
+  "status.nodir": "Folder does not exist: {0}",
+  "status.nocameras": "No cameras found in this folder.",
+  "status.cameras": "Found {0} camera(s).",
+  "status.readingdays": "Reading days for camera {0}…",
+  "status.days": "{0}: {1} days with recordings.",
+  "status.loadingday": "Loading {0}…",
+  "status.dayloaded": "{0}: {1} files, {2} of footage in total.",
+  "status.dayempty": "{0}: no recordings.",
+  "status.durations": "Exact segment durations are ready.",
+  "status.endofday": "End of recordings for this day.",
+  "status.rate": "Playback speed: {0}×",
+  "status.exporting": "Exporting…",
+  "status.saved": "Saved: {0}",
+  "status.exportfailed": "Export failed.",
+  "status.scanerror": "Scan error: {0}",
+  "status.loaderror": "Error loading day: {0}",
+
+  "pane.norecordings": "no recordings",
+  "pane.info": "{0} files, {1}",
+
+  "export.title": "Export",
+  "export.needselection": "Select a range first: Shift + drag on the timeline, or use the [ and ] buttons.",
+  "export.needffmpeg": "Export requires ffmpeg.exe in PATH or next to the application.",
+  "export.reencode": "Re-encode the footage (H.264/AAC)?\n\nYES – exact cut and compatibility with any player, but slower.\nNO – fast concatenation without recompression (HEVC), cut to the nearest keyframe.",
+
+  "dlg.choosefolder": "Choose the xiaomi_camera_videos folder",
+  "err.title": "Error"
+}
